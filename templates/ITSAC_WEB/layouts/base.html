@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- Primary Meta Tags -->
+
+  <title>
+    ITSAC - {% block title %}{% endblock %}
+  </title>
+  {% load static %}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="ITSAC">
+  <meta name="author" content="JijuISTeam">
+  <meta name="description" content="IT Services Assets Cybersecurity">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itsac.lottecorp.co.kr:8282">
+  <meta property="og:title" content="ITSAC">
+  <meta property="og:description" content="IT Services Assets Cybersecurity">
+  <!--
+    <meta property="og:image"
+    content="">
+  -->
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="120x120" href="{% static 'ITSAC_WEB/assets/img/favicon/apple-touch-icon.png' %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'ITSAC_WEB/assets/img/favicon/favicon-32x32.png' %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'ITSAC_WEB/assets/img/favicon/favicon-16x16.png' %}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- css -->
+  {% comment %} <link type="text/css" href="{% static 'ITSAC_WEB/assets/vendor/sweetalert2/dist/sweetalert2.min.css' %}" rel="stylesheet"> {% endcomment %}
+  {% comment %} <link type="text/css" href="{% static 'ITSAC_WEB/assets/vendor/notyf/notyf.min.css' %}" rel="stylesheet"> {% endcomment %}
+  <link type="text/css" href="{% static 'ITSAC_WEB/assets/css/itsac.min.css' %}" rel="stylesheet">
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block stylesheets %}{% endblock stylesheets %}
+</head>
+
+<body>
+  {% include 'ITSAC_WEB/includes/sidebar.html' %}
+
+  <main class="content">
+
+    {% include 'ITSAC_WEB/includes/navigation.html' %}
+
+    {% block content %}{% endblock content %}
+
+    {% include 'ITSAC_WEB/includes/footer.html' %}
+
+  </main>
+
+  {% include 'ITSAC_WEB/includes/scripts.html' %}
+
+  <!-- Specific Page JS goes HERE  -->
+  {% block javascripts %}{% endblock javascripts %}
+
+</body>
+
+</html>
