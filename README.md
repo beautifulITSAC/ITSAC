@@ -1,4 +1,4 @@
-# ITSAC 2.0 프로젝트
+# ITSAC 2.0
 
 ## 1) 개발환경 셋팅
 * python3 및 pip3 설치 - [링크](https://www.python.org/)
