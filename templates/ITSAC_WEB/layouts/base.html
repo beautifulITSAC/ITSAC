@@ -33,27 +33,45 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- css -->
-  {% comment %} <link type="text/css" href="{% static 'ITSAC_WEB/assets/vendor/sweetalert2/dist/sweetalert2.min.css' %}" rel="stylesheet"> {% endcomment %}
-  {% comment %} <link type="text/css" href="{% static 'ITSAC_WEB/assets/vendor/notyf/notyf.min.css' %}" rel="stylesheet"> {% endcomment %}
-  <link type="text/css" href="{% static 'ITSAC_WEB/assets/css/itsac.min.css' %}" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/bootstrap/dist/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/nprogress/nprogress.css' %}" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/iCheck/skins/flat/green.css' %}" rel="stylesheet">
+
+  <!-- bootstrap-progressbar -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css' %}" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/jqvmap/dist/jqvmap.min.css' %}" rel="stylesheet" />
+  <!-- bootstrap-daterangepicker -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/bootstrap-daterangepicker/daterangepicker.css' %}" rel="stylesheet">
+
+  <!-- Gentelella Theme Style -->
+  <link href="{% static 'ITSAC_WEB/assets/vendors/Gentelella/css/custom.min.css' %}" rel="stylesheet">
 
   <!-- Specific Page JS goes HERE  -->
   {% block stylesheets %}{% endblock stylesheets %}
 </head>
 
-<body>
-  {% include 'ITSAC_WEB/includes/sidebar.html' %}
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      {% include 'ITSAC_WEB/includes/sidebar.html' %}
 
-  <main class="content">
+      {% include 'ITSAC_WEB/includes/navigation.html' %}
 
-    {% include 'ITSAC_WEB/includes/navigation.html' %}
+      <div class="right_col" role="main">
+        {% include 'ITSAC_WEB/includes/top_title.html' %}
 
-    {% block content %}{% endblock content %}
+        {% block content %}{% endblock content %}
 
-    {% include 'ITSAC_WEB/includes/footer.html' %}
-
-  </main>
-
+      </div>
+      {% include 'ITSAC_WEB/includes/footer.html' %}
+    </div>
+  </div>
   {% include 'ITSAC_WEB/includes/scripts.html' %}
 
   <!-- Specific Page JS goes HERE  -->
